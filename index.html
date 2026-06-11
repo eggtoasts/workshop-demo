@@ -58,7 +58,7 @@
     </div>
     <script>
       async function loadPlaylist() {
-        const response = await fetch("http://localhost:3000/playlist");
+        const response = await fetch("http://localhost:8000/playlist");
         const data = await response.json();
 
         const container = document.querySelector(".playlist-container");
