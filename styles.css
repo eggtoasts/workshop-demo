@@ -1,0 +1,129 @@
+.green {
+  background-color: #1ed760;
+  color: #1ed760;
+}
+
+.black {
+  background-color: #121212;
+  color: #121212;
+}
+
+/* playlist section! */
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 1px rgba(255, 11, 11, 0.265);
+  margin: 0px;
+  padding: 0px;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  color: #fff;
+}
+
+.playlist {
+  .playlist-header {
+    width: fit-content;
+    display: flex;
+    margin: 50px;
+  }
+
+  .playlist-info {
+    max-height: 150px;
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  p {
+    color: #b3b3b3;
+  }
+  .playlist-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background: #333;
+  }
+  .playlist-info {
+  }
+
+  .playlist-container {
+    height: 20px;
+  }
+}
+
+/* song row */
+
+.img {
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  background: #333;
+}
+
+.song-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 60px;
+  padding: 8px 16px;
+  border-bottom: 0.5px solid #ffffff18;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 60px;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.song:hover {
+  background: #ffffff15;
+}
+
+.song-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.song-title {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.song-artist {
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.song-album {
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.song-num {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.song-duration {
+  font-size: 13px;
+  color: #b3b3b3;
+  text-align: right;
+}
