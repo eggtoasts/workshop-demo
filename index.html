@@ -21,14 +21,17 @@
 
       <section class="playlist">
         <div class="playlist-header">
-          <div class="playlist-pic"></div>
+          <img
+            class="playlist-pic"
+            src="https://imgcdn.stablediffusionweb.com/2025/3/7/d087b117-92f1-45a4-bb6e-8a53c929ff5b.jpg"
+          />
 
           <div class="playlist-info">
             <p>Private playlist</p>
-            <h1>Favorite Songs</h1>
+            <h1 class="playlist-name">Loading...</h1>
 
             <div class="playlist-creator">
-              <p>Sam</p>
+              <p class="playlist-creator-name">Loading...</p>
             </div>
           </div>
         </div>
@@ -62,6 +65,12 @@
         const data = await response.json();
 
         const container = document.querySelector(".playlist-container");
+
+        const playlistName = document.querySelector(".playlist-name");
+        const user = document.querySelector(".playlist-creator-name");
+
+        playlistName.textContent = `${data.name}`;
+        user.textContent = `${data.owner}`;
 
         data.songs.forEach((song, index) => {
           const songDiv = document.createElement("div");
