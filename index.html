@@ -41,7 +41,7 @@
             <span>Duration</span>
           </div>
 
-          <div class="song">
+          <!-- <div class="song">
             <span class="song-num">1</span>
             <div class="song-left">
               <div class="img"></div>
@@ -52,9 +52,39 @@
             </div>
             <span class="song-album">Album Name</span>
             <span class="song-duration">3:24</span>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>
+    <script>
+      async function loadPlaylist() {
+        const response = await fetch("http://localhost:3000/playlist");
+        const data = await response.json();
+
+        const container = document.querySelector(".playlist-container");
+
+        data.songs.forEach((song, index) => {
+          const songDiv = document.createElement("div");
+          songDiv.classList.add("song");
+
+          songDiv.innerHTML = `
+        <span class="song-num">${index + 1}</span>
+        <div class="song-left">
+          <div class="img"></div>
+          <div>
+            <p class="song-title">${song.title}</p>
+            <p class="song-artist">${song.artist}</p>
+          </div>
+        </div>
+        <span class="song-album">${song.album}</span>
+        <span class="song-duration">${song.duration}</span>
+      `;
+
+          container.appendChild(songDiv);
+        });
+      }
+
+      loadPlaylist();
+    </script>
   </body>
 </html>
